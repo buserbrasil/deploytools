@@ -18,7 +18,7 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     && rm awscliv2.zip
 
 RUN pip install \
-        ansible==2.11.1 \
+        ansible==4.1.0 \
         boto3==1.9.201
 
 COPY bin/* /usr/bin/
