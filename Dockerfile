@@ -21,4 +21,7 @@ RUN pip install \
         ansible==4.1.0 \
         boto3==1.9.201
 
+RUN ansible-galaxy collection install amazon.aws && \
+    ansible-galaxy collection install community.general
+
 COPY bin/* /usr/bin/
