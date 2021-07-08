@@ -24,4 +24,9 @@ RUN pip install \
 RUN ansible-galaxy collection install amazon.aws && \
     ansible-galaxy collection install community.general
 
+RUN curl https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip -o terraform.zip && \
+    unzip terraform.zip && \
+    rm terraform.zip && \
+    mv terraform /usr/bin/terraform
+
 COPY bin/* /usr/bin/
